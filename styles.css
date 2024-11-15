@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(APECIMAGES/dde1e734-a417-49f4-9511-02f7a4ec2c48.webp);
+  background-position: top;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 0 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 120px;
+  height: 120px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 69px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.explore-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 34px;
+  font-size: 18px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.explore-btn:hover {
+  border: 1px solid #e21212;
+  background: #e21212;
+  transition: 1s;
+}
+
+nav .fa {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .text-box h1 {
+    font-size: 46px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background: #e21212;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 10px;
+    cursor: pointer;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+
+  .Apec-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+/* --------------second page----------------*/
+
+.course {
+  width: 80%;
+  margin: auto; /* it will be in center */
+
+  text-align: center;
+  padding-top: 100px;
+  background-color: rgba(39, 61, 148, 0.7);
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 600px;
+}
+
+.goals {
+  font-size: 25px;
+}
+
+p {
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.course-col {
+  width: 30%;
+  text-align: justify;
+  background: #fff3f3;
+  border-radius: 15px;
+  margin-bottom: 5%;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  transition: 0.8s;
+}
+
+.frenchgirl {
+  margin-left: -250px;
+  /* width:40%; */
+  width: 200px;
+  height: 0;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.course-col:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* -------------------Campus------------------- */
+
+/* .row{
+  margin-top: 5%;
+  display: flex;
+  justify-content:space-between;    This is the styling of the original flexbox.
+  flex-wrap:wrap;
+} */
+.rowtwo {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.campus {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.campus-col {
+  flex-basis: 32%;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.campus-col img {
+  /*This makes the whole image fit. */
+  width: 100%;
+  display: block;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%; /*covers the complete image*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover {
+  background: rgba(226, 0, 0, 0.6); /*opacity 0.5*/
+}
+
+.layer h3 {
+  width: 100%;
+  font-weight: 600;
+  color: white;
+  font-size: 30px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.layer:hover h3 {
+  bottom: 77%;
+  opacity: 1;
+}
+
+.layer p {
+  width: 100%;
+  font-weight: 500;
+  color: white;
+  font-size: 15px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.layer:hover p {
+  bottom: 10%;
+  opacity: 1;
+}
