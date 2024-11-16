@@ -5,6 +5,9 @@
   font-weight: 400;
   font-style: normal;
 }
+body {
+  overscroll-behavior: none;
+}
 
 .header {
   min-height: 100vh;
@@ -84,7 +87,6 @@ nav img {
   text-align: center;
   white-space: pre-wrap; /* Ensure line breaks are respected */
   overflow: hidden;
-  border-right: 2px solid white; /* Blinking cursor */
   animation: blink-caret 0.5s step-end infinite;
 }
 
@@ -96,7 +98,6 @@ nav img {
     border-right-color: transparent;
   }
 }
-
 
 .text-box p {
   margin: 10px 0 40px;
@@ -163,24 +164,24 @@ nav .fa {
 }
 /* --------------second page----------------*/
 
-.container-course{
+.container-course {
   background-color: rgba(252, 255, 100, 0.7);
   background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(255, 241, 39, 0.7));
+  height: 800px;
 }
 
 .course {
-  width: 80%;
+  width: 85%;
   margin: auto; /* it will be in center */
   text-align: center;
-  padding-top: 100px;
-  
+  padding-top: 10px;
 }
 
 .course h1 {
   font-size: 60px;
   font-weight: 600px;
   color: rgb(255, 255, 255);
-  text-shadow:5px 5px #ffd000;
+  text-shadow: 5px 5px #ffd000;
 }
 
 .goals {
@@ -195,10 +196,14 @@ p {
 }
 
 .row {
-  margin-top: 5%;
+  margin-top: 2%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.course-row {
+  height: 200px;
 }
 
 .course-col {
@@ -206,18 +211,22 @@ p {
   text-align: justify;
   background: #fff3f3;
   border-radius: 15px;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   padding: 20px 20px;
   box-sizing: border-box;
-  transition: 0.8s, color 2s;  /*HOW TO MAKE THE TEXT APPEAR SLOWLY AHHHHHHHH >_<*/
-  
+  transition: 0.8s, color 2s;
+  height: 200px; /*HOW TO MAKE THE TEXT APPEAR SLOWLY AHHHHHHHH >_<*/
 }
 
 .frenchgirl {
   margin-left: -250px;
   /* width:40%; */
-  width: 200px;
+  width: 100px;
   height: 0;
+}
+
+.frenchgirl-img {
+  height: 450px;
 }
 
 h3 {
@@ -230,11 +239,11 @@ h3 {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transform: scale(1.5);
-  color:black;
+  color: black;
 }
 
-.course-col:hover p{
-  color:black;
+.course-col:hover p {
+  color: black;
 }
 
 @media (max-width: 700px) {
@@ -245,10 +254,11 @@ h3 {
 
 /* -------------------Campus------------------- */
 
-.partthree{
+.partthree {
   /* margin:0;      TwT ERRORRRRRRRR, How to change the backgroundcolor to the color below? code no no work!!!!!
   /* background-color: blue; */
-  background: linear-gradient(rgba(255, 241, 39, 0.7),rgba(32, 77, 255, 0.7),);
+  background: linear-gradient(rgba(255, 241, 39, 0.7), rgba(32, 77, 255, 0.7));
+  height: 800px;
 }
 
 /* .row{
@@ -284,19 +294,19 @@ h3 {
   box-shadow: 10px 10px 5px rgb(138, 170, 255);
 }
 
-.campus .goals{
-  color:rgb(0, 68, 255);
+.campus .goals {
+  color: rgb(0, 68, 255);
 }
 
 .campus-col img {
   /*This makes the whole image fit. */
   /* width: 100%; */
-  width:250px;
-  height:200px;
+  width: 250px;
+  height: 200px;
   display: block;
 }
 
-.campus-col .picture{
+.campus-col .picture {
   margin-left: auto;
   margin-right: auto;
   object-fit: cover;
@@ -314,14 +324,14 @@ h3 {
 }
 
 .layer:hover {
-  background: rgba(226, 0, 0, 0.8); 
+  background: rgba(226, 0, 0, 0.8);
 }
 
-.campus h1{
+.campus h1 {
   font-size: 60px;
   font-weight: 600px;
   color: rgb(255, 255, 255);
-  text-shadow:5px 5px #ffd000;
+  text-shadow: 5px 5px #ffd000;
 }
 
 .layer h3 {
