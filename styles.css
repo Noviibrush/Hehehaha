@@ -9,8 +9,8 @@
 .header {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(APECIMAGES/dde1e734-a417-49f4-9511-02f7a4ec2c48.webp);
+  background-image: linear-gradient(rgba(26, 34, 66, 0.7), rgba(4, 9, 30, 0.7)),
+    url(assets/images/apec.webp);
   background-position: top;
   background-size: cover;
   position: relative;
@@ -68,11 +68,35 @@ nav img {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  display: inline-block;
 }
 
 .text-box h1 {
   font-size: 69px;
+  letter-spacing: 5px;
 }
+
+#typewriter {
+  /* font-family: 'Arial', sans-serif; */
+  /* font-size: 2.5rem; */
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  white-space: pre-wrap; /* Ensure line breaks are respected */
+  overflow: hidden;
+  border-right: 2px solid white; /* Blinking cursor */
+  animation: blink-caret 0.5s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from {
+    border-right-color: white;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
 
 .text-box p {
   margin: 10px 0 40px;
@@ -139,18 +163,24 @@ nav .fa {
 }
 /* --------------second page----------------*/
 
+.container-course{
+  background-color: rgba(252, 255, 100, 0.7);
+  background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(255, 241, 39, 0.7));
+}
+
 .course {
   width: 80%;
   margin: auto; /* it will be in center */
-
   text-align: center;
   padding-top: 100px;
-  background-color: rgba(39, 61, 148, 0.7);
+  
 }
 
-h1 {
+.course h1 {
   font-size: 60px;
   font-weight: 600px;
+  color: rgb(255, 255, 255);
+  text-shadow:5px 5px #ffd000;
 }
 
 .goals {
@@ -158,7 +188,7 @@ h1 {
 }
 
 p {
-  color: black;
+  color: rgb(255, 245, 245);
   font-size: 14px;
   font-weight: 300;
   line-height: 22px;
@@ -179,7 +209,8 @@ p {
   margin-bottom: 5%;
   padding: 20px 20px;
   box-sizing: border-box;
-  transition: 0.8s;
+  transition: 0.8s, color 2s;  /*HOW TO MAKE THE TEXT APPEAR SLOWLY AHHHHHHHH >_<*/
+  
 }
 
 .frenchgirl {
@@ -199,6 +230,11 @@ h3 {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transform: scale(1.5);
+  color:black;
+}
+
+.course-col:hover p{
+  color:black;
 }
 
 @media (max-width: 700px) {
@@ -209,12 +245,19 @@ h3 {
 
 /* -------------------Campus------------------- */
 
+.partthree{
+  /* margin:0;      TwT ERRORRRRRRRR, How to change the backgroundcolor to the color below? code no no work!!!!!
+  /* background-color: blue; */
+  background: linear-gradient(rgba(255, 241, 39, 0.7),rgba(32, 77, 255, 0.7),);
+}
+
 /* .row{
   margin-top: 5%;
   display: flex;
-  justify-content:space-between;    This is the styling of the original flexbox.
+  justify-content:space-between;    This is the styling of the original flexbox. No need to fix >_< 
   flex-wrap:wrap;
 } */
+
 .rowtwo {
   margin-top: 5%;
   display: flex;
@@ -229,6 +272,7 @@ h3 {
   margin-top: 50px;
   text-align: center;
   padding-top: 50px;
+  /* background: linear-gradient(rgba(255, 241, 39, 0.7),rgba(32, 77, 255, 0.7),); */
 }
 
 .campus-col {
@@ -237,12 +281,26 @@ h3 {
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
+  box-shadow: 10px 10px 5px rgb(138, 170, 255);
+}
+
+.campus .goals{
+  color:rgb(0, 68, 255);
 }
 
 .campus-col img {
   /*This makes the whole image fit. */
-  width: 100%;
+  /* width: 100%; */
+  width:250px;
+  height:200px;
   display: block;
+}
+
+.campus-col .picture{
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  width: 100%;
 }
 
 .layer {
@@ -256,7 +314,14 @@ h3 {
 }
 
 .layer:hover {
-  background: rgba(226, 0, 0, 0.6); /*opacity 0.5*/
+  background: rgba(226, 0, 0, 0.8); 
+}
+
+.campus h1{
+  font-size: 60px;
+  font-weight: 600px;
+  color: rgb(255, 255, 255);
+  text-shadow:5px 5px #ffd000;
 }
 
 .layer h3 {
@@ -272,13 +337,14 @@ h3 {
   transition: 0.5s;
 }
 .layer:hover h3 {
-  bottom: 77%;
+  bottom: 58%;
   opacity: 1;
 }
 
 .layer p {
   width: 100%;
   font-weight: 500;
+  font-size: 59px;
   color: white;
   font-size: 15px;
   bottom: 0;
