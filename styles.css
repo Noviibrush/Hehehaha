@@ -5,6 +5,10 @@
   font-weight: 400;
   font-style: normal;
 }
+
+html {
+  scroll-snap-type: y mandatory;
+}
 body {
   overscroll-behavior: none;
 }
@@ -17,6 +21,7 @@ body {
   background-position: top;
   background-size: cover;
   position: relative;
+  scroll-snap-align: start;
 }
 
 nav {
@@ -168,6 +173,7 @@ nav .fa {
   background-color: rgba(252, 255, 100, 0.7);
   background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(255, 241, 39, 0.7));
   height: 800px;
+  scroll-snap-align: start;
 }
 
 .course {
@@ -189,14 +195,13 @@ nav .fa {
 }
 
 p {
-  color: rgb(255, 245, 245);
+  /* color: rgb(255, 245, 245); */
   font-size: 14px;
   font-weight: 300;
   line-height: 22px;
 }
 
 .row {
-  margin-top: 2%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -209,24 +214,54 @@ p {
 .course-col {
   width: 30%;
   text-align: justify;
-  background: #fff3f3;
-  border-radius: 15px;
-  margin-bottom: 2%;
+  /* background: #fff3f3; */
+
   padding: 20px 20px;
   box-sizing: border-box;
-  transition: 0.8s, color 2s;
+
+  /* transition: 0.8s, color 2s; */
   height: 200px; /*HOW TO MAKE THE TEXT APPEAR SLOWLY AHHHHHHHH >_<*/
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: #fff3f4;
+  border-radius: 15px;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.course-col:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.card-front {
+  background-color: #fff3f4;
+}
+
+.card-back {
+  background-color: #fff3f4;
+  transform: rotateY(180deg);
 }
 
 .frenchgirl {
   margin-left: -250px;
   /* width:40%; */
   width: 100px;
-  height: 0;
 }
 
 .frenchgirl-img {
-  height: 450px;
+  height: 410px;
 }
 
 h3 {
@@ -235,7 +270,7 @@ h3 {
   margin: 10px 0;
 }
 
-.course-col:hover {
+/* .course-col:hover {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transform: scale(1.5);
@@ -244,7 +279,7 @@ h3 {
 
 .course-col:hover p {
   color: black;
-}
+} */
 
 @media (max-width: 700px) {
   .row {
@@ -259,6 +294,9 @@ h3 {
   /* background-color: blue; */
   background: linear-gradient(rgba(255, 241, 39, 0.7), rgba(32, 77, 255, 0.7));
   height: 800px;
+  margin-top: 0;
+
+  scroll-snap-align: start;
 }
 
 /* .row{
@@ -279,7 +317,6 @@ h3 {
 .campus {
   width: 80%;
   margin: auto;
-  margin-top: 50px;
   text-align: center;
   padding-top: 50px;
   /* background: linear-gradient(rgba(255, 241, 39, 0.7),rgba(32, 77, 255, 0.7),); */
@@ -291,7 +328,7 @@ h3 {
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
-  box-shadow: 10px 10px 5px rgb(138, 170, 255);
+  box-shadow: 10px 10px 5px rgb(28, 84, 240);
 }
 
 .campus .goals {
@@ -369,4 +406,29 @@ h3 {
 .layer:hover p {
   bottom: 10%;
   opacity: 1;
+}
+
+/* SECTION 4 22'S PART */
+
+.twotwo {
+  scroll-snap-align: start;
+}
+
+.asianAPEC {
+  background-color: aqua;
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.countryballs {
+  display: inline;
+}
+
+.countryballs img {
+  width: 20%;
+  border-radius: 50%;
+  display: inline;
 }
