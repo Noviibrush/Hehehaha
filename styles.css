@@ -1,8 +1,5 @@
-@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
-@import url('https://fonts.cdnfonts.com/css/poppins');
-
-
-
+@import url("https://fonts.cdnfonts.com/css/ica-rubrik-black");
+@import url("https://fonts.cdnfonts.com/css/poppins");
 
 * {
   margin: 0;
@@ -193,11 +190,12 @@ nav .fa {
   font-size: 60px;
   font-weight: 600px;
   color: rgb(255, 255, 255);
-  text-shadow: 5px 5px #ffd000;
+  text-shadow: 5px 5px #000;
 }
 
 .goals {
   font-size: 25px;
+  color: white;
 }
 
 p {
@@ -218,7 +216,7 @@ p {
 }
 
 .course-col {
-  width: 30%;
+  width: 33%;
   text-align: justify;
   /* background: #fff3f3; */
 
@@ -232,7 +230,8 @@ p {
 .card {
   width: 100%;
   height: 100%;
-  background-color: #fff3f4;
+
+  background-color: rgba(255, 243, 243, 0.3);
   border-radius: 15px;
   position: relative;
   transition: transform 1500ms;
@@ -252,12 +251,21 @@ p {
   backface-visibility: hidden;
 }
 .card-front {
-  background-color: #fff3f4;
+  background-color: rgba(255, 243, 244, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-back {
-  background-color: #fff3f4;
+  background-color: rgba(255, 243, 244, 0.3);
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .frenchgirl {
@@ -416,21 +424,23 @@ h3 {
 
 /* SECTION 4 22'S PART */
 
-.twotwo{
+.twotwo {
   width: 100%;
   height: 100vh;
+  scroll-snap-align: start;
+  background: linear-gradient(rgba(32, 77, 255, 0.7), rgba(226, 0, 0, 0.8));
 }
 
-.banner{
+.banner {
   width: 100%;
   height: 100vh;
   text-align: center;
   overflow: hidden;
   position: relative;
-  margin: auto;            
+  margin: auto;
 }
 
-.banner .slider{
+.banner .slider {
   position: absolute;
   width: 200px;
   height: 256px;
@@ -438,48 +448,55 @@ h3 {
   left: calc(50% - 100px);
   transform-style: preserve-3d;
   transform: perspective(1000px);
-  animation: autoRun 20s linear infinite; 
+  animation: autoRun 20s linear infinite;
 }
 
-@keyframes autoRun{
-  from{
+@keyframes autoRun {
+  from {
     transform: perspective(1000px) rotateX(-5deg) rotateY(0deg);
-  }to{
+  }
+  to {
     transform: perspective(1000px) rotateX(-5deg) rotateY(360deg);
   }
 }
 
-.banner .slider .item{
+.banner .slider .item {
   position: absolute;
   inset: 0 0 0 0;
-  transform:
-    rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
     translateZ(550px);
 }
 
-.banner .slider .item img{
+.banner .slider .item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.banner .content{
+.banner .content {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: min(1400px, 100vw);
   height: max-content;
-  padding-bottom: 100px;
+  padding-bottom: 12px;
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-.banner .content h1{
-  font-family: 'ICA Rubrik';
-  font-size: 16em;
+.banner .content h1 {
+  font-family: "ICA Rubrik";
+  font-size: 4em;
   line-height: 1em;
+}
+
+.banner .content p {
+  font-size: 2rem;
 }
