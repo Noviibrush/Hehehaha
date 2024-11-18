@@ -346,7 +346,8 @@ h3 {
 }
 
 .campus .goals {
-  color: rgb(0, 68, 255);
+  color: rgb(8, 20, 56);
+  font-weight: 500;
 }
 
 .campus-col img {
@@ -382,7 +383,7 @@ h3 {
   font-size: 60px;
   font-weight: 600px;
   color: rgb(255, 255, 255);
-  text-shadow: 5px 5px #ffd000;
+  text-shadow: 5px 5px #000000;
 }
 
 .layer h3 {
