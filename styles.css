@@ -250,6 +250,22 @@ p {
   position: absolute;
   backface-visibility: hidden;
 }
+
+.card-front p{
+  font-size: 18px;
+  font-family:"Itim",cursive;
+  text-align: center;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.card-back p{
+  padding:26px;
+  color:rgb(87, 11, 11);
+  font-weight: 700;
+  font-family:"Itim",cursive;
+}
+
 .card-front {
   background-color: rgba(255, 243, 244, 0.3);
   display: flex;
