@@ -402,3 +402,98 @@ body {
   font-family:"poppins";
   font-size:13px;
 }
+
+
+.rotate{
+  background-color:#383838;
+  padding-top:100px;
+  padding-bottom: 100px;
+  /* position:relative; */
+}
+
+.twotwo {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  background-color:#383838;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+.banner .slider {
+  position: absolute;
+  width: 200px;
+  height: 256px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1300px) rotateX(-3deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1300px) rotateX(-3deg) rotateY(360deg);
+  }
+}
+
+.banner .slider .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
+    translateZ(550px);
+}
+
+.banner .slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 35px;
+}
+
+.banner .content {
+  position: absolute;
+  bottom: -7%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1400px, 100vw);
+  height: max-content;
+  padding-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.banner .content h1 {
+  font-family: "ICA Rubrik";
+  font-size: 4em;
+  line-height: 1em;
+  color:white;
+  text-shadow: 5px 5px #000;
+}
+
+.banner .content p {
+  font-size: 2rem;
+  color:white;
+  /* text-shadow: 3px 3px #000; */
+}
+
+.banner .slider .item .balltext{
+  color:white;
+  font-family: "ICA Rubrik";
+  font-size: 1em;
+}

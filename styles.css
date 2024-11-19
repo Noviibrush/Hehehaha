@@ -454,10 +454,10 @@ h3 {
 
 @keyframes autoRun {
   from {
-    transform: perspective(1000px) rotateX(-5deg) rotateY(0deg);
+    transform: perspective(1200px) rotateX(-5deg) rotateY(0deg);
   }
   to {
-    transform: perspective(1000px) rotateX(-5deg) rotateY(360deg);
+    transform: perspective(1200px) rotateX(-5deg) rotateY(360deg);
   }
 }
 
@@ -496,8 +496,11 @@ h3 {
   font-family: "ICA Rubrik";
   font-size: 4em;
   line-height: 1em;
+  color:aqua;
+  text-shadow:5px 5px black;
 }
 
 .banner .content p {
   font-size: 2rem;
+  color:aqua;
 }
